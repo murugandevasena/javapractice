@@ -19,5 +19,6 @@ public class ArrayToSingle {
 		}
 		System.out.println(s);
 		
+		
 	}
 }

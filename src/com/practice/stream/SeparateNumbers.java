@@ -13,7 +13,7 @@ public class SeparateNumbers {
 		for(Character c:a) {
 			l.add(c);
 		}
-		//System.out.println(l);
+		System.out.println(l);
 		
 		s.chars().filter(x->Character.isDigit(x)).forEach(x->System.out.println((char)x));
 		s.chars().filter(x->x>='0'&&x<='9').forEach(y->System.out.print((char)y));

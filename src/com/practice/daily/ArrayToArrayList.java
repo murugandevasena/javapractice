@@ -27,7 +27,7 @@ public class ArrayToArrayList {
 		
 		for(int j=0;j<l1.size();j++) {
 			b[j]=l1.get(j);
-			System.out.print(+b[j]+" ");
+			System.out.print(b[j]+" ");
 		}
 		
 		//String array into String arraylist.
@@ -37,10 +37,6 @@ public class ArrayToArrayList {
 			l.add(x);
 		}
 		System.out.println();
-		System.out.println("String array to arraylist:"+l);
-		
-		
-		
+		System.out.println("String array to arraylist:"+l);	
 	}
-
 }

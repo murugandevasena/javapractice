@@ -6,7 +6,7 @@ public class UseMyThread {
 		Thread t = new Thread(myThread);
 		t.start();
 		//myThread.run();
-		Thread.sleep(2000);  //2sec
+		Thread.sleep(5000);  //2sec
 		System.out.println("Hi");
 	}
 

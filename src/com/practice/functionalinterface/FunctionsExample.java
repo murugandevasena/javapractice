@@ -1,4 +1,4 @@
-package com.practice.functionalinterface;
+ package com.practice.functionalinterface;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

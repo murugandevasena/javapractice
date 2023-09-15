@@ -18,14 +18,20 @@ public class FibonacciPractice {
 	}
 	private static void printFibonacci(int i) {
 		// TODO Auto-generated method stub
+		int total=0;
 		int tmp=0;
 		if(i>0) {
 			tmp=a+b;
 			a=b;
 			b=tmp;
+			//total+= a;
+			
 			System.out.print(" "+tmp);
 			printFibonacci(i-1);  
 		}
+		total=total+tmp;
+//		temp+=a;
+		System.out.println("sum:"+total);
 		
 	}
 

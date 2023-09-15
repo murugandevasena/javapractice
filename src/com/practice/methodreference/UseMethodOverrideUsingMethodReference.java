@@ -4,7 +4,7 @@ import java.util.function.BiFunction;
 
 public class UseMethodOverrideUsingMethodReference {
 
-	MethodOverrideUsingMethodReference methodOverrideUsingMethodReference =new MethodOverrideUsingMethodReference();
+	//MethodOverrideUsingMethodReference methodOverrideUsingMethodReference =new MethodOverrideUsingMethodReference();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		

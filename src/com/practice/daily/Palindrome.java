@@ -2,7 +2,7 @@ package com.practice.daily;
 
 public class Palindrome {
 	public static void main(String[] args) {
-		String g="malayalam"; 
+		String g="malayalam".toLowerCase(); 
 		
 		//Before checking polindrome, we need ensure all the characters should be either lowerCase or Uppercase.
 		//String g =h.toUpperCase();
@@ -13,9 +13,6 @@ public class Palindrome {
 		if(r.equals(g)) {
 			System.out.println("it is palindroome.");
 		} else
-			System.out.println("it is not palindrome.");
-		
-		
+			System.out.println("it is not palindrome.");	  
 	}
-
 }

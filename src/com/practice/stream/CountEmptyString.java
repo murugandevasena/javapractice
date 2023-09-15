@@ -1,6 +1,7 @@
 package com.practice.stream;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
@@ -31,6 +32,14 @@ public class CountEmptyString {
 		//using last index of 
 		List<Integer> list = l1.stream().filter(x3->l1.indexOf(x3)!= l1.lastIndexOf(x3)).distinct().collect(Collectors.toList());
 		System.out.print(list);
+		
+		int[] a = { 25, 10, 30, 25, 30 };
+		List<Integer> list1 = Arrays.stream(a).boxed().collect(Collectors.toList());
+		
+		HashSet<Integer> s11 = new HashSet<Integer>();
+		Set<Integer> s3 = list1.stream().filter(x2-> !s11.add(x2)).collect(Collectors.toSet());
+		System.out.print(s3);
+		
 		 
 	}
 }

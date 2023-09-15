@@ -1,18 +1,23 @@
-package com.practice.daily;
+ package com.practice.daily;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class FindSumOfFive {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//find the combination of five using streams
-		List<Integer> list = Arrays.asList(0,1,2,3,4,5,6,7);
+		List<Integer> list = Arrays.asList(4,4,5,3,3);
 		
-		 list.stream().flatMap(i->list.stream().filter(j->i+j==5 &&i>j).map(j->i+","+j)).forEach(x-> System.out.println(x));
+		 long a=list.stream().flatMap(i->list.stream().filter(j->i+j==8 && i>j).map(j->i+","+j)).count();
+		 System.out.println(a);
 		 
 		 List<Integer> l1 = Arrays.asList(1,3,4,5,6,7);
 		 List<Integer> l2 = Arrays.asList(5,90,92,94,45);
@@ -20,9 +25,25 @@ public class FindSumOfFive {
 		 List<Integer> l4 = l3.stream().flatMap(x->x.stream()).collect(Collectors.toList());
 		 System.out.println(l4);
 		 
+		 Integer dd = l4.stream().reduce(0,Integer::max);
+		 System.out.println("sum dd:"+dd);
+		 
+		 int[] a1 = {1,3,4,5,6,7};
+		 List<Integer> lj = Arrays.asList(1,3,4,5,6,7);
+		 int[] a2 = {5,90,92,94,45};
+		 
+		 IntStream stream1 = Arrays.stream(a1);
+	     IntStream stream2 = Arrays.stream(a2);
+
+	     // Use flatMap to flatten the streams
+	     IntStream flattenedStream = IntStream.concat(stream1, stream2);
+
+	     // Print the flattened stream
+	     flattenedStream.forEach(System.out::println);
+		
 		 //Count the possible combination which gives 8 as a output.
 		long g= l4.stream().flatMap(i1->l4.stream().filter(j1->i1+j1==8 && i1>j1).peek(j1->System.out.println(i1 +", "+j1))).count();
-		System.out.println(g);
+		System.out.println("Count possaible of 8:"+g);
 		
 		//SummingFloat
 		
@@ -40,8 +61,15 @@ public class FindSumOfFive {
 		System.out.println(g3);
 		
 		
+		//find the length of the string
+		List<String> words = Arrays.asList("GFG", "Geeks", "for",
+                "GeeksQuiz", "GeeksforGeeks");
 		
-		 
+		Optional<String> str = words.stream().reduce((x11,x21)
+				->x11.length() > x21.length() 
+				? x11 : x21);
+		str.ifPresent(System.out::println);
+		
 	
 		 
 	}

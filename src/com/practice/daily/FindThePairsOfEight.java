@@ -8,7 +8,9 @@ public class FindThePairsOfEight {
 		
 		
 		
-		List<Integer> a = Arrays.asList(4, 4, 5, 3, 2, 6, 8, 1, 0, 9);
+		List<Integer> a = Arrays.asList(4, 4, 5, 3, 2, 6, 8, 1, 0, 9);	
+		long g= a.stream().flatMap(i1->a.stream().filter(j1->i1+j1==8 && i1>j1).peek(j1->System.out.println(i1 +", "+j1))).count();
+		System.out.println(g);
 		
 		int count = 0;
 		for (int i = 0; i < a.size(); i++) {

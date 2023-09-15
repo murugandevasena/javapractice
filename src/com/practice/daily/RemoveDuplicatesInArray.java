@@ -1,5 +1,6 @@
 package com.practice.daily;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -19,6 +20,8 @@ public class RemoveDuplicatesInArray {
 	    
 	    //Using stream
 	    List<Integer> list = IntStream.of(a).boxed().collect(Collectors.toList());
+	    //alternate wat to convert array to list
+	    List<Integer> list1 = Arrays.stream(a).boxed().collect(Collectors.toList());
 	    list.stream().distinct().collect(Collectors.toList());
 	    System.out.println("remove duplicate using stream:"+list.stream().distinct().collect(Collectors.toList()));
 	    
@@ -63,6 +66,6 @@ public class RemoveDuplicatesInArray {
 		 for(int i=0;i<a.length;i++) {
 			 h1.add(a[i]);
 		 }
-		 System.out.println(h1);
+		 System.out.println("using linkedList:"+h1);
 	}
 }

@@ -1,15 +1,16 @@
 package com.practice.daily;
 
-import java.util.HashSet;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.List;
 
 public class RemoveRepeatedChar {
 	
 	public static void main(String[] args) {
 		
 		
-		String g ="onesofttechnology";
+		String g ="onesoft technology";
 		char[] d = g.toCharArray();
 		
 		int x= d.length;
@@ -26,5 +27,16 @@ public class RemoveRepeatedChar {
 			h.add(c);
 		}
 		System.out.println("Remove chanratcers using enhanced for loop"+h);
+		
+	   
+		
+		//return the duplicate string
+		String g1 ="onesoft technology technology";
+		String[] t = g1.split(" ");
+		List<String> list = Arrays.asList(t);
+		System.out.println(list);
+		
+		list.stream().filter(x1->Collections.frequency(list, x1)>1).distinct().forEach(u->System.out.println(u+" "));
+		
 	}
 }
